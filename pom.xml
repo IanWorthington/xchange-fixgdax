@@ -106,6 +106,7 @@
 		<module>xchange-empoex</module>
 		<module>xchange-examples</module>
 		<module>xchange-gatecoin</module>
+		<module>xchange-gatehub</module>
 		<module>xchange-hitbtc</module>
 		<module>xchange-itbit</module>
 		<module>xchange-independentreserve</module>
