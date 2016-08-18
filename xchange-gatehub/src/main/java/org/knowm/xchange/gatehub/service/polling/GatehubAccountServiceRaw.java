@@ -28,7 +28,7 @@ public class GatehubAccountServiceRaw extends BaseExchangeService {
 
   private final GatehubAuthenticated gatehubAuthenticated;
   private final BearerToken token;
-  private final String walletAddress;
+  protected final String walletAddress;
   private final String userUid;
   private final Map<Currency, String> vaults = new HashMap<Currency, String>() {{
     put(Currency.ETH, "dbf81182-93f7-4ae1-b1b8-ba7016d6e546");

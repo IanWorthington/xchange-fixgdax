@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.currency.Currency;
 import org.knowm.xchange.dto.account.AccountInfo;
+import org.knowm.xchange.dto.account.Wallet;
 import org.knowm.xchange.exceptions.ExchangeException;
 import org.knowm.xchange.exceptions.NotYetImplementedForExchangeException;
 import org.knowm.xchange.gatehub.GatehubAdapters;
@@ -23,7 +24,7 @@ public class GatehubAccountService extends GatehubAccountServiceRaw implements P
 
   @Override
   public AccountInfo getAccountInfo() throws IOException, ExchangeException {
-    return new AccountInfo(GatehubAdapters.adaptWallets(getGatehubBalances()));
+    return new AccountInfo(new Wallet(this.walletAddress, GatehubAdapters.adaptBalances(getGatehubBalances())));
   }
 
   /**

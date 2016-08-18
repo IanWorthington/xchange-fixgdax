@@ -34,8 +34,9 @@ public class GatehubTest {
   @Ignore
   public void shouldAccessBalance() throws Exception {
     Wallet wallet = account.getAccountInfo().getWallet();
-    assertThat(wallet.getBalances().keySet()).contains(Currency.ETH);
-    Balance ethBalance = wallet.getBalance(Currency.ETH);
+    Currency currency = new Currency("ETC");
+    assertThat(wallet.getBalances().keySet()).contains(currency);
+    Balance ethBalance = wallet.getBalance(currency);
     assertThat(ethBalance).isNotNull();
     assertThat(ethBalance.getTotal()).isPositive();
     assertThat(ethBalance.getAvailable()).isPositive();
