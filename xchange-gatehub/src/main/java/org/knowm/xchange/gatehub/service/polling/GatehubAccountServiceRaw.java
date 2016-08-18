@@ -32,6 +32,7 @@ public class GatehubAccountServiceRaw extends BaseExchangeService {
   private final String userUid;
   private final Map<Currency, String> vaults = new HashMap<Currency, String>() {{
     put(Currency.ETH, "dbf81182-93f7-4ae1-b1b8-ba7016d6e546");
+    put(new Currency("ETC"), "6b1efef3-f6bc-44fd-86d7-5f30c7cd87a6");
   }};
 
   public GatehubAccountServiceRaw(Exchange exchange) {
